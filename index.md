@@ -23,7 +23,7 @@ The process of setting up the site locally consists of:
 
 ```
 toolbox enter
-sudo dnf install rubygem-bundler
+sudo dnf install rubygem-bundler ruby-devel gcc-c++
 cd os-component-website
 bundle install
 ```
