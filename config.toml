@@ -1,0 +1,17 @@
+base_url = "https://jimmac.github.io/os-component-website"
+title = "Website Template"
+description = "Description of the OS Component website."
+
+compile_sass = false
+build_search_index = false
+generate_feeds = false
+
+[markdown]
+
+[slugify]
+paths = "safe"
+
+[extra]
+sourceurl = "https://github.com/jimmac/os-component-website"
+issuesurl = "https://github.com/jimmac/os-component-website/issues"
+primary_color = "#26a269"

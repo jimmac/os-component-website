@@ -7,7 +7,7 @@ Some other unrealized projects using the template: [Pango](https://jimmac.pages.
 The top level goal was to make it a nicer looking, spam-free alternative to a wiki:
 
 * Easily editable source in the form of [markdown](https://daringfireball.net/projects/markdown/) text. 
-* As close to HTML+CSS as possible. Markdown achieved using Jekyll, which is sadly the lowest maintenance overhead solution due to easy integration with [Gitlab](https://gitlab.com) and [GitHub](https://github.com) hosting.
+* As close to HTML+CSS as possible. Originally built with [Jekyll](https://jekyllrb.com/), the template has been ported to [Zola](https://www.getzola.org/) -- a single static binary with no dependencies. Builds are near-instant and there's no Ruby/gem dependency hell to deal with. Easy integration with [Gitlab](https://gitlab.com) and [GitHub](https://github.com) hosting.
 
 If you are a Free software project fitting into the category of OS component, feel free to [file an issue here](https://github.com/jimmac/os-component-website/issues) to request pixel art for your site.
 

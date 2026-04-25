@@ -1,31 +1,29 @@
-image: ruby:2.6
+stages:
+  - build
+  - deploy
 
-cache:
-  paths:
-  - _bundle/
-
-before_script:
-  - gem install bundler
-  - bundle install --path _bundle
-
-build:
+build-zola:
   stage: build
+  image: archlinux:latest
   script:
-  - bundle exec jekyll b
-  - mv _site public
+    - pacman -Syu --noconfirm zola
+    - zola build --output-dir public
   artifacts:
     paths:
-    - public
-  except:
-  - master
+      - public
+    expire_in: 1 hour
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
 
 pages:
   stage: deploy
+  image: archlinux:latest
+  needs:
+    - build-zola
   script:
-  - bundle exec jekyll b
-  - mv _site public
+    - echo "Deploying to GitLab Pages..."
   artifacts:
     paths:
-    - public
-  only:
-  - main
+      - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH

@@ -1,0 +1,27 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="{{ config.extra.primary_color }}">
+
+  <title>{% if page.title is defined and page.title %}{{ page.title }} - {{ config.title }}{% else %}{{ config.title }}{% endif %}</title>
+
+  <link rel="canonical" href="{{ current_url | default(value=config.base_url) | safe }}" />
+
+  <link rel="stylesheet" href="{{ config.base_url }}/style.css" />
+
+  <link rel="icon" type="image/png" href="{{ config.base_url }}/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ config.base_url }}/apple-touch-icon.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:title" content="{{ config.title }}" />
+  <meta property="twitter:image" content="{{ config.base_url }}/assets/card.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:description" content="{{ config.description }}" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ config.title }}" />
+  <meta property="og:url" content="{{ config.base_url }}" />
+  <meta property="og:description" content="{{ config.description }}" />
+  <meta property="og:image" content="{{ config.base_url }}/assets/card.png" />
+</head>
