@@ -168,10 +168,10 @@ img {
 
 /* Layout */
 .container {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 720px;
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 /* Singletons */
@@ -219,11 +219,99 @@ img {
 
 
 /* Footer */
+
 footer {
+  background-color: #1e1e22;
+  margin-top: 6rem;
+  padding: 2em 0 4em;
+  color: white;
+}
+
+footer p {
+  font-size: 80%;
+  max-width: 720px;
+  padding: 0 10%;
+  margin: auto;
   text-align: center;
-  padding: 3em 0 3em;
-  font-size: 1em;
-  margin-top: 4rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer a[href^="http"]:after {
+  content: none;
+}
+
+ul.bottomlinks {
+  column-width: 12rem;
+  column-gap: 24px;
+  max-width: 60rem;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  line-height: 2.5rem;
+}
+
+ul.bottomlinks li {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.bottomlinks li:first-child a {
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+}
+
+ul.bottomlinks li a {
+  font-weight: 400;
+  font-variation-settings: "wght" 600;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,0);
+  transition: all 200ms ease-out;
+}
+
+ul.bottomlinks li a:hover {
+  text-decoration-color: rgba(255,255,255,1);
+}
+
+a.social {
+  width: 32px;
+  height: 32px;
+  margin: 0;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin: 24px 6px 0 0;
+  gap: 6px;
+}
+
+.social {
+  fill: rgba(255,255,255,0.6);
+  transition: all 200ms ease-out;
+}
+
+.social:hover {
+  fill: rgba(255,255,255,1);
+}
+
+.extlink > svg {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  fill: rgba(255,255,255,0.6);
+  transition: all 200ms ease-out;
+}
+
+.extlink:hover > svg {
+  fill: rgba(255,255,255,1);
 }
 
 /* tables */
@@ -277,8 +365,14 @@ pre {
   overflow-x: auto;
   margin: 1rem 0;
 }
-  @media only screen and (max-device-width : 480px) {
-  /*mobile*/
+  @media only screen and (max-width: 650px) {
+  ul.bottomlinks {
+    column-count: 1;
+  }
+  .socials {
+    justify-content: center;
+    margin-top: 16px;
+  }
   pre { max-width: 80vw; }
   }
 

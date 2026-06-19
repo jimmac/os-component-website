@@ -1,0 +1,32 @@
+[[links]]
+lnk = "OS Component Home"
+url = "/"
+
+[[links]]
+lnk = "Issues"
+url = "https://github.com/jimmac/os-component-website/issues"
+
+[[links]]
+lnk = "Demo: Pipewire"
+url = "https://pipewire.org/"
+
+
+[[links]]
+lnk = "Demo: Toolbx"
+url = "https://containertoolbx.org/"
+
+[[links]]
+lnk = "Demo: Mutter"
+url = "https://mutter.gnome.org/"
+
+[[links]]
+lnk = "Demo: Desktop Portal"
+url = "https://flatpak.github.io/xdg-desktop-portal/"
+
+[[links]]
+lnk = "Demo: Fleet Commander"
+url = "https://fleet-commander.org/"
+
+[[links]]
+lnk = "Demo: Granite.code"
+url = "https://granitecode.ai"
